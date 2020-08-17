@@ -3,14 +3,16 @@
 using namespace std;
  
 int main() {
-    int TooncesKM = 60;
-    float HectorKM = TooncesKM + 15;
-    int hr = 60;
-
-    cout << "a) = " << 10 / (TooncesKM / hr) << "mins" << endl;
-    cout << "b) = " << 10 / (HectorKM / hr) << "mins" << endl;
-    cout << "c) = " << (10 / (TooncesKM / hr)) - (10 / (HectorKM / hr)) << "mins" << endl;
-    cout << "hihihihihihihihihi" << endl;
+    int total = 540;
+    int rect = total / 12;
+    int rectWidth = 0;
+    int rectHeight = 0;
+    int rectHeiht = 0;
+    int rectHeig = 0;
+    int rectHeght = 0;
+    
+    
+    
 
     return 0;
 }
