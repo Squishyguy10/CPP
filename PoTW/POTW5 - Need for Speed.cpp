@@ -10,6 +10,5 @@ int main() {
     cout << "a) = " << 10 / (TooncesKM / hr) << "mins" << endl;
     cout << "b) = " << 10 / (HectorKM / hr) << "mins" << endl;
     cout << "c) = " << (10 / (TooncesKM / hr)) - (10 / (HectorKM / hr)) << "mins" << endl;
-
     return 0;
 }

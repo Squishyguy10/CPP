@@ -10,6 +10,5 @@ int main() {
     int missed = total - (kyb + aau - both);
 
     cout << "The number of students the missed both workshops were " << missed << endl;
-
     return 0;
 }

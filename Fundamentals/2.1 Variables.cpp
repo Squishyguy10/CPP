@@ -10,6 +10,5 @@ int main() {
     cout << "Long Long Integer Min: " << LLONG_MIN << endl;
     cout << "Long Long Integer Max: " << LLONG_MAX << endl;
     cout << "Unsigned Long Long Integer Max: " << ULLONG_MAX << endl;
-
     return 0;
 }

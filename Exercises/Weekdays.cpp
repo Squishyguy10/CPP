@@ -6,25 +6,19 @@ int main() {
     int day;
     cin >> day;
 
-    if(day%7 == 1){
+    if(day%7 == 1) {
         cout << "Monday" << endl;
-    }
-    else if(day%7 == 2){
+    } else if(day%7 == 2) {
         cout << "Tuesday" << endl;
-    }
-    else if (day%7 == 3){
+    } else if (day%7 == 3) {
         cout << "Wednesday" << endl;
-    }
-    else if(day%7 == 4){
+    } else if(day%7 == 4) {
         cout << "Thursday" << endl;
-    }
-    else if(day%7 == 5){
+    } else if(day%7 == 5) {
         cout << "Friday" << endl;
-    }
-    else if(day%7 == 6){
+    } else if(day%7 == 6) {
         cout << "Saturday" << endl;
-    }
-    else{
+    } else {
         cout << "Sunday" << endl;
     }
     return 0;

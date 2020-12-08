@@ -3,12 +3,8 @@
 using namespace std;
  
 int main() {
-    cout << 10%2 << endl;
-    cout << 15%2 << endl;
-    cout << 23%3 << endl;
-
+    // % "module" means the remainder of
     // != means "not equal to"
     // ! means "not/opposite" (!true = false)
-
     return 0;
 }

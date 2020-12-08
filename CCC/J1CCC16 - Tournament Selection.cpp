@@ -9,20 +9,17 @@ int main() {
     for(int i = 0; i < 6; i++){
         cin >> input;
         if(input == 'W'){
-            total_score++;        // total++ is "total = total + 1" or "total+= 1"
+            total_score++; 
         }
     }
     
-    if(total_score >= 5){
+    if(total_score >= 5) {
         cout << 1 << endl; 
-    }
-    else if(total_score >= 3){
+    } else if(total_score >= 3) {
         cout << 2 << endl;
-    }
-    else if(total_score >= 1){
+    } else if(total_score >= 1) {
         cout << 3 << endl;
-    }
-    else{
+    } else {
         cout << -1 << endl;
     }
     return 0;
