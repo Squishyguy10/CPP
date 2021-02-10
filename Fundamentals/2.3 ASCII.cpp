@@ -3,6 +3,11 @@
 using namespace std;
  
 int main() {
+    cout << "Hello \nWorld" << endl; 
+    //  \r\n is used in Windows 
+    //  \n is used in MacOS and Linux, both add a new line
+    //  endl is \n or \r\n based on the OS
+
     // ASCII
     char my_char = '1';
     cout << int(my_char) << endl;
