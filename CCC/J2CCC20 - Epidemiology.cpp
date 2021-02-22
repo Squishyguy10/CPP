@@ -9,7 +9,7 @@ int main() {
 
     total = infected;
 
-    while(total < total_min) {
+    while(total <= total_min) {
         infected *= inf_rate;
         total += infected;
         day++;

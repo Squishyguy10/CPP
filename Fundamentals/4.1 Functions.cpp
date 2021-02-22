@@ -10,7 +10,6 @@ using namespace std;
 //     return 0;
 // }
 
-
 // void my_function(string|bool|int parameter, ...) {
 // }
 // void my_function(string name, int height) {
@@ -21,28 +20,35 @@ using namespace std;
 //     my_function("David", 173);
 //     return 0;
 // }
+int sum;
 
-// string my_function(string name, int height) {
-//     cout << "Name: " << name << endl << "Height: " << height << "cm" << endl << endl;
-//     return "George";
-// }
-// int main() {
-//     string str = my_function("George", 154);
-//     str = my_function("David", 173);
-//     return 0;
-// }
-
-int my_function(int input1, int input2) {
-    int sum = input1 * input2;
+int aplusb(int a, int b) {
+    sum = a + b;
     return sum;
 }
+
+int aminusb(int a, int b) {
+    sum = a - b;
+    return sum;
+}
+
+int atimesb(int a, int b) {
+    sum = a * b;
+    return sum;
+}
+
+double adivideb(int a, int b) {
+    double(sum) = double(a) / b;
+    return sum;
+}
+
 int main() {
-    int answer, num1 = 1, num2 = 10;
-    for(int i = 0; i < 10; i++) {
-        answer = my_function(num1, num2);
-        cout << answer << endl;
-        num1++;
-        num2--;
-    }
+    int a, b;
+    cin >> a >> b;
+    cout << "a + b = " << aplusb(a, b) << endl;
+    cout << "a - b = " << aminusb(a, b) << endl;
+    cout << "a * b = " << atimesb(a, b) << endl;
+    cout << "a / b = " << adivideb(a, b) << endl;
+
     return 0;
 }

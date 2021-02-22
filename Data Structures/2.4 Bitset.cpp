@@ -8,9 +8,9 @@ using namespace std;
 int main() {
     bitset <8> bits(0); // or bitset <8> bits("00000000");
     // bits.set(Index, Number Value)
-    bits.set(0, 1); // 0000 0000 --> // 1000 0000
-    bits.set(5, 1); // 0000 0000 --> // 1000 0000
-    bits.reset(0); // 0000 0000 --> // 1000 0000
+    bits.set(0, 1); // 0000 0000 --> // 0000 0001
+    bits.set(5, 1); // 0000 0001 --> // 0010 0001
+    bits.reset(0); // 0010 0001 --> // 0010 0000
     cout << bits << endl;
     
     int x = 75;

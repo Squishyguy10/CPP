@@ -9,9 +9,9 @@ int main() {
 
     if(S + 2*M + 3*L >= 10){
         cout << "happy" << endl;
-    }
-    else{
+    } else {
         cout << "sad" << endl;
     }
+    
     return 0;
 }

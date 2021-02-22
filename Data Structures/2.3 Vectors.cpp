@@ -4,6 +4,7 @@ using namespace std;
 
     // vector<Datatype> "name" = {};
     vector<int> vect = {2, 1, 4, 3, 6, 5};
+    vector<char> v[5];
 
 void access_vectors() {
     for(int i = 0; i < vect.size(); i++) {
