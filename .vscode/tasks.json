@@ -5,14 +5,11 @@
             "label": "Mingw-w64 C++ Build",
             "command": "g++",
             "args": [
-                "-std=c++14",   // For C++ version, Can't use c++17, due to Mingw-w64 "filesystem" bug with c++17, bits/stdc++.h include C++17
-                "-g",           // for gdb debug
+                "-std=c++14",
+                "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe",
-                // "${workspaceFolder}/Utils/utils.cpp",
-                // "-I",
-                // "${workspaceFolder}/Utils",
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
             "group": {
                 "kind": "build",
@@ -24,7 +21,8 @@
                 "focus": false,
                 "panel": "shared",
                 "clear": true
-            }
+            },
+            "problemMatcher": []
         }
     ],
     "version": "2.0.0"

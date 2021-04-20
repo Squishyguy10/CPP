@@ -36,6 +36,7 @@ int main() {
             ctrue++;
         }
     }
+    
     gold -= (rtrue * ctrue);
     cout << gold << endl;
 
