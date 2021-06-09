@@ -3,7 +3,7 @@
 using namespace std;
 
     // vector<Datatype> "name" = {};
-    vector<int> vect = {2, 1, 4, 3, 6, 5};
+    vector<int> vect = {1, 2, 3, 4, 5, 6};
     vector<char> v[5];
 
 void access_vectors() {
@@ -29,8 +29,8 @@ void iterators() {
 void operations() {
         // Add element to the back
     // vect.push_back(7);
-        // Insert element by index, insert "20" to second element
-    // vect.insert(vect.begin()+5, 20);
+        // Insert element by index, insert "20" to 6th element
+    vect.insert(vect.begin()+5, 20);
         // Remove last element
     // vect.pop_back();
         // Remove any element
@@ -59,7 +59,7 @@ void vector_2d() {
 int main() {
     // access_vectors();
     // iterators();
-    // operations();
+    operations();
     // vector_2d();
 
     return 0;
