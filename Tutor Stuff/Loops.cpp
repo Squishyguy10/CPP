@@ -41,7 +41,10 @@ void whileloop2() {
 int main() {
     // forloop();
     // whileloop1();
-    whileloop2();
+    // whileloop2();
+
+    double i = 2.56;
+    cout << round(i) << endl;
 
     return 0;
 }

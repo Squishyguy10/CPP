@@ -3,7 +3,11 @@
 using namespace std;
 
 bool determine_prime(int number) {
-    for(int i = 2; i < number/2; i++) {
+    if(number%2 == 0) {
+        return false;
+    }
+
+    for(int i = 3; i < sqrt(number); i+= 2) {
         if(number%i == 0) {
             return false;
         }
@@ -17,7 +21,7 @@ void generate_prime(int number) {
     for(int i = 1; i < number; i+= 2) {
         bool check = true;
 
-        for(int j = 2; j < i/2; j++) {
+        for(int j = 2; j < sqrt(i); j++) {
             if(i%j == 0) {
                 check = false;
                 break;
@@ -41,7 +45,22 @@ int main() {
         cout << number << " isn't prime" << endl;
     }
 
-    generate_prime(number);
+    // generate_prime(number);
+    
+    // int check = 0;
+    // bool check2 = false;
+
+    // for(int i = 2; i < number/2; i++) {
+    //     if(number%i == 0) {
+    //         check = 1;
+    //         break;
+    //     }
+    // }
+    // if(check = 0) {
+    //     cout << number << " is prime" << endl;
+    // } else {
+    //     cout << number << " isn't prime" << endl;
+    // }
     
     return 0;
 }

@@ -12,12 +12,8 @@ int brute_force(int input) {
 }
 
 int gauss(int input) {
-    if(input % 2 == 0) {
-        sum = (input+1) * (input/2);
-    } else {
-        sum = input * (input/2) + input;
-    }
-
+    sum = input * (input+1) / 2;
+    
     return sum;
 }
 
