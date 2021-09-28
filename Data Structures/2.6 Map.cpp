@@ -2,7 +2,7 @@
  
 using namespace std;
 
-map <string, int> my_map = {    // Organizes data automatically
+map <string, int> my_map = {    // Organizes data automatically - dictionary
     {"Apples", 5},
     {"Oranges", 3},
     {"Grapes", 8}

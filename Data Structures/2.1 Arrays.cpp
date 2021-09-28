@@ -3,6 +3,9 @@
 using namespace std;
 
 void one_dim_array() {
+    int arr[1000];          // Random numbers generated from the memory
+    int arr[1000] = {};     // All values set to 0
+
     int books[3];
     int apples[] = {1, 3, 2, 55, 14, 0, 13};
     char bye[] = {'b', 'y', 'e'};

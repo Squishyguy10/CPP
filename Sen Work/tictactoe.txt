@@ -1,0 +1,6 @@
+Components:
+1. Board state - data structure
+2. Given a board state, computes if someone has won or if there is a tie
+3. Given an input, update board state in that position
+4. Loop point3 until point2, while switching between players
+5. Draw board every time point4 loops, including pieces
