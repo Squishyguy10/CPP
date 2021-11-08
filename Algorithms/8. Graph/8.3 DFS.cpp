@@ -9,13 +9,13 @@ void add_undirected_edge(int source_vertex, int target_vertex) {
     graph[target_vertex][source_vertex] = 1;
 }
 
-void bfs(int start) {
+void dfs(int start) {
     bool visited[5] = {};
-    queue<int> order;
+    stack<int> order;
     order.push(start);
 
     while(!order.empty()) {
-        int current_vertex = order.front();
+        int current_vertex = order.top();
         order.pop();
         if(!visited[current_vertex]) {
             visited[current_vertex] = true;
@@ -26,6 +26,8 @@ void bfs(int start) {
             }
         }
     }
+
+    
 }
 
 int main() {
@@ -37,7 +39,7 @@ int main() {
     add_undirected_edge(4, 3);
     add_undirected_edge(3, 2);
 
-    bfs(0);
+    dfs(0);
     
     return 0;
 }

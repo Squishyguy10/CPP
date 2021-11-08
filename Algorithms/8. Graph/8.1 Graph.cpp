@@ -4,22 +4,22 @@ using namespace std;
 
 int graph[5][5];
 
-void add_directed_edge(int u, int v) {
-    graph[u][v] = 1;
+void add_directed_edge(int source_vertex, int target_vertex) {
+    graph[source_vertex][target_vertex] = 1;
 }
 
-void add_undirected_edge(int u, int v) {
-    graph[u][v] = 1;
-    graph[v][u] = 1;
+void add_undirected_edge(int source_vertex, int target_vertex) {
+    graph[source_vertex][target_vertex] = 1;
+    graph[target_vertex][source_vertex] = 1;
 }
 
-void add_directed_edge_weight(int u, int v, int value) {
-    graph[u][v] = value;
+void add_directed_edge_weight(int source_vertex, int target_vertex, int weight) {
+    graph[source_vertex][target_vertex] = weight;
 }
 
-void add_undirected_edge_weight(int u, int v, int value) {
-    graph[u][v] = value;
-    graph[v][u] = value;
+void add_undirected_edge_weight(int source_vertex, int target_vertex, int weight) {
+    graph[source_vertex][target_vertex] = weight;
+    graph[target_vertex][source_vertex] = weight;
 }
 
 void output_graph() {

@@ -3,15 +3,15 @@
 using namespace std;
 
 const int PAGES = 10001;
-bool graph[PAGES][PAGES] = {};
 int num_pages[PAGES] = {};
 bool visited[PAGES] = {};
+vector<int> graph[PAGES];
 
-void add_directed_edge(int row, int col) {
-    graph[row][col] = true;
+void add_directed_edge(int source_vertex, int target_vertex) {
+    graph[source_vertex].push_back(target_vertex);
 }
 
-void bfs(int pages) {
+void bfs() {
     queue<int> order;
     order.push(1);
     num_pages[1] = 1;
@@ -20,13 +20,13 @@ void bfs(int pages) {
     while(!order.empty()) {
         int current_vertex = order.front();
         order.pop();
+
         if(!visited[current_vertex]) {
             visited[current_vertex] = true;
-            for(int i = 1; i <= pages; i++) {
-                if(graph[current_vertex][i] && !visited[i]) {
-                    order.push(i);
-                    num_pages[i] = num_pages[current_vertex] + 1;
-                }
+
+            for(int i = 1; i <= graph[current_vertex].size(); i++) {
+                order.push(graph[current_vertex][i]);
+                num_pages[i] = num_pages[current_vertex] + 1;
             }
         }
     }
@@ -50,7 +50,7 @@ int main() {
         }
     }
 
-    bfs(pages);
+    bfs();
 
     char reachable = 'Y';
     for(int i = 1; i <= pages; i++) {
