@@ -64,7 +64,7 @@ int main() {
 
     int minimum = pages;
     for(int i = 1; i < end_pages.size(); i++) {
-        if(num_pages[end_pages[i]] < minimum)
+        if(num_pages[end_pages[i]] < minimum && num_pages[end_pages[i]] != 0)
             minimum = num_pages[end_pages[i]];
     }
         
