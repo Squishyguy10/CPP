@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
  
 using namespace std;
-// Sets are arrays that contain unique elements that you can organize. They will delete reoccuring copies of elements
+// Sets are arrays that contain unique elements that you can organize. They will delete reccuring copies of elements
 
 set<int> set1 = {5, 2, 4, 1, 1, 3};
 

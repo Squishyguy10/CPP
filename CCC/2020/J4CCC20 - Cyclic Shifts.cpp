@@ -31,6 +31,4 @@ int main() {
     string str1, str2;
     cin >> str1 >> str2;
     cout << shifts(str1, str2) << endl;
-    
-    return 0;
 }

@@ -26,6 +26,7 @@ Linux-0.ssh.tgz
 Thumbs.db
 Desktop.ini
 *.exe
+*.prob
 
 # SQLite3 database files:
 *.db

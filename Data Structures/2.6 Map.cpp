@@ -8,6 +8,8 @@ map <string, int> my_map = {    // Organizes data automatically - dictionary
     {"Grapes", 8}
 };
 
+// map<string,int>::iterator itr = mymap.begin() + index;
+
 void access_map() {
     cout << my_map["Apples"] << endl;
     
@@ -61,7 +63,10 @@ int main() {
     // access_map();
     // operations();
     // find_key();
-    // my_unordered_map();
+    my_unordered_map();
+
+    mp.insert({ 2, 30 });
+    mp.insert({ 1, 40 });
+    mp.insert({ 3, 60 });
     
-    return 0;
 }

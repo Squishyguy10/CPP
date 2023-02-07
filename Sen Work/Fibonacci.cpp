@@ -15,9 +15,8 @@ int fibonacci(int input) {
 
 
 int fibonacci2(int input) {
-    if(input == 1 || input == 2){
+    if(input == 1 || input == 2)
         return 1;
-    }
     return fibonacci2(input - 1) + fibonacci2(input - 2);
 }
 

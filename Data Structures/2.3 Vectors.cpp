@@ -28,15 +28,15 @@ void iterators() {
 }
 void operations() {
         // Add element to the back
-    // vect.push_back(7);
+    vect.push_back(7);
         // Insert element by index, insert "20" to 6th element
     vect.insert(vect.begin()+5, 20);
         // Remove last element
-    // vect.pop_back();
+    vect.pop_back();
         // Remove any element
-    // vect.erase(vect.begin()+1);
+    vect.erase(vect.begin()+1);
         // Remove multiple elements
-    // vect.erase(vect.begin()+2, vect.begin()+4)
+    vect.erase(vect.begin()+2, vect.begin()+4);
 
     for(auto item : vect) {
         cout << item << endl;

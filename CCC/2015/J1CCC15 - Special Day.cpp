@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
- 
+
 using namespace std;
  
 int main() {
     int month, day;
-
     cin >> month >> day;
 
     if(month == 2){
@@ -26,5 +25,4 @@ int main() {
              cout << "Before";
         }
     }
-    return 0;
 }

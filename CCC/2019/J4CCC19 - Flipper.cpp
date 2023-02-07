@@ -38,6 +38,4 @@ int main() {
         cout << grid[i] << " ";
     }
     cout << endl;
-
-    return 0;
 }
