@@ -27,6 +27,7 @@ Thumbs.db
 Desktop.ini
 *.exe
 *.prob
+*.bin
 
 # SQLite3 database files:
 *.db
@@ -48,3 +49,4 @@ tramp
 # Mac
 .DS_Store
 ._*
+

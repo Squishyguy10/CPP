@@ -14,11 +14,7 @@ int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    for(int i = 0; i < 43; i++) {
-        int a, b;
-        cin >> a >> b;
-        cout << b-a << '\n';
-    }
+
 
 
 
