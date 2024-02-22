@@ -1,49 +1,82 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long
 #define f first
 #define s second
 
-int r, c;
+char maze[21][21];
+int moves[21][21];
 
-int bfs(char cur, vector<vector<char>> vect) {
-    bool visited[r][c];
-    queue<pair<int, int>> q;
-
-    visited[0][0] = true;
-    q.push({0, 0});
-
-    while(!q.empty()) {
-        char curr = vect[q.front().f][q.front().s];
-        q.pop();
-        visited[]
-        
-        if()
-    }
-
-
-}
-
-int32_t main() {
+int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int cases;
-    cin >> cases;
-
+    int cases; cin >> cases;
     while(cases--) {
+        int r, c;
         cin >> r >> c;       
-        vector<vector<char>> vect(r, vector<char> (c, 0));
+        queue<pair<int, int>> q;
 
         for(int i = 0; i < r; i++) {
             for(int j = 0; j < c; j++) {
-                cin >> vect[i][j];
+                cin >> maze[i][j];
+                moves[i][j] = INT_MAX;
             }
         }
 
-        cout << bfs(vect[0][0], vect) << '\n';
+        moves[0][0] = 1;
+        q.push({0, 0});
+        while(!q.empty()) {
+            int y = q.front().f, x = q.front().s;
+            q.pop();
+            if(moves[r-1][c-1] != INT_MAX) {
+                break;
+            }
+            if(maze[y][x] == '+') {
+                if(y - 1 >= 0 && moves[y-1][x] == INT_MAX && maze[y-1][x] != '*') {
+                    q.push({y-1, x});
+                    moves[y-1][x] = moves[y][x]+1;
+                }
+                if(x - 1 >= 0 && moves[y][x-1] == INT_MAX && maze[y][x-1] != '*') {
+                    q.push({y, x-1});
+                    moves[y][x-1] = moves[y][x]+1;
+                }
+                if(y + 1 < r && moves[y+1][x] == INT_MAX && maze[y+1][x] != '*') {
+                    q.push({y+1, x});
+                    moves[y+1][x] = moves[y][x]+1;
+                }
+                if(x + 1 < c && moves[y][x+1] == INT_MAX && maze[y][x+1] != '*') {
+                    q.push({y, x+1});
+                    moves[y][x+1] = moves[y][x]+1;
+                }
+            }
+            else if(maze[y][x] == '|') {
+                if(y - 1 >= 0 && moves[y-1][x] == INT_MAX && maze[y-1][x] != '*') {
+                    q.push({y-1, x});
+                    moves[y-1][x] = moves[y][x]+1;
+                }
+                if(y + 1 < r && moves[y+1][x] == INT_MAX && maze[y+1][x] != '*') {
+                    q.push({y+1, x});
+                    moves[y+1][x] = moves[y][x]+1;
+                }
+            }
+            else if(maze[y][x] == '-') {
+                if(x - 1 >= 0 && moves[y][x-1] == INT_MAX && maze[y][x-1] != '*') {
+                    q.push({y, x-1});
+                    moves[y][x-1] = moves[y][x]+1;
+                }
+                if(x + 1 < c && moves[y][x+1] == INT_MAX && maze[y][x+1] != '*') {
+                    q.push({y, x+1});
+                    moves[y][x+1] = moves[y][x]+1;
+                }
+            }
+        }
+        if(r == 1 && c == 1)
+            cout << 1 << '\n';
+        else if(moves[r-1][c-1] == INT_MAX)
+            cout << -1 << '\n';
+        else
+            cout << moves[r-1][c-1] << '\n';
     }
-    
     return 0;
 }
